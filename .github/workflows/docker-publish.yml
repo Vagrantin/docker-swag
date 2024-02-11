@@ -82,7 +82,7 @@ jobs:
             #tags: ${{ steps.meta.outputs.tags }}
           tags: |
             nekkuma/keeweb:latest
-            nekkuma/keeweb:0.0.1
+            nekkuma/keeweb:0.0.2
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
