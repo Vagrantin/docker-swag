@@ -77,7 +77,12 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+            #tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            nekkuma/keeweb:latest
+            nekkuma/keeweb:0.0.1
+            ghcr.io/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/${{ env.IMAGE_NAME }}:0.0.1
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
