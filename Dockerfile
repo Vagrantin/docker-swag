@@ -95,7 +95,6 @@ RUN \
     /tmp/proxy-confs.tar.gz -C \
     /defaults/nginx/proxy-confs --strip-components=1 --exclude=linux*/.editorconfig --exclude=linux*/.gitattributes --exclude=linux*/.github --exclude=linux*/.gitignore --exclude=linux*/LICENSE && \
   wget "https://github.com/keeweb/keeweb/releases/download/v1.18.7/KeeWeb-1.18.7.html.zip" --directory-prefix=/tmp && \
-  mv /config/www/index.html /config/www/index.old && \
   unzip "/tmp/KeeWeb-1.18.7.html.zip" -d /config/www && \
   echo "**** cleanup ****" && \
   apk del --purge \
