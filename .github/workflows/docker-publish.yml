@@ -81,8 +81,7 @@ jobs:
           tags: |
             nekkuma/keeweb:latest
             nekkuma/keeweb:0.0.1
-            ghcr.io/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ env.IMAGE_NAME }}:0.0.1
+            ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
